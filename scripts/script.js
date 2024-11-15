@@ -19,14 +19,14 @@ function toggleSection(sectionId)
 
 
 // VISIT COUNTER
-let visitCount = localStorage.getItem('visitCount');
-if (!visitCount) {
-  visitCount = 1;
-} else {
-  visitCount = parseInt(visitCount) + 1;
-}
-localStorage.setItem('visitCount', visitCount);
-document.getElementById('visit-counter').textContent = 'Visits: ' + visitCount;
+// let visitCount = localStorage.getItem('visitCount');
+// if (!visitCount) {
+//   visitCount = 1;
+// } else {
+//   visitCount = parseInt(visitCount) + 1;
+// }
+// localStorage.setItem('visitCount', visitCount);
+// document.getElementById('visit-counter').textContent = 'Visits: ' + visitCount;
 
 
 
@@ -59,3 +59,17 @@ document.getElementById('visit-counter').textContent = 'Visits: ' + visitCount;
 
 // // Initialize active link when the page loads
 // setActiveLink();
+
+
+// EXTERNAL LINKS
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("DOM fully loaded and parsed");
+
+    // Select all links with a specific class or all <a> tags
+    const links = document.querySelectorAll("a.external-link");
+
+    links.forEach(link => {
+        link.setAttribute("target", "_blank");
+        link.setAttribute("rel", "noopener noreferrer");
+    });
+});
