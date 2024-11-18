@@ -129,30 +129,6 @@ a:hover {
     min-width: 1000px;
 }
 
-.project-item-thumbnail {
-    /* flex: 1 1 calc(25% - 10px); */
-    position: relative;
-    border: 2px solid rgb(128, 0, 0);
-    box-sizing: border-box;
-    overflow: hidden;
-    height: 300px;
-    max-width: 300px;
-    min-width: 300px;
-}
-
-/* 
-@media (max-width: 1024px) {
-    .project-item {
-        flex: 1 1 calc(50% - 10px);
-    }
-}
-
-@media (max-width: 768px) {
-    .project-item {
-        flex: 1 1 100%;
-    }
-} */
-
 .project-item:hover {
     border-color: red;
     /* transform: scale(1.01); */
@@ -160,7 +136,7 @@ a:hover {
 
 .project-item:hover .project-item-image {
     opacity: 1;
-    background-image: url("images/tinyrails.gif");
+    /*background-image set from script!*/
 }
 
 .project-item-image
@@ -173,7 +149,7 @@ a:hover {
     width: 300px;
     height: 300px;
     opacity: 0.8;
-    background-image: url("images/tinyrails.jpg");
+    /*background-image set from script!*/
     background-size: cover;
     background-position: center;
 }
@@ -185,10 +161,9 @@ a:hover {
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.8);
-    color: white;
     padding: 4px;
     text-align: center;
-    /* font-weight: bold; */
+    font-weight: bold;
     font-size: 18px;
     box-sizing: border-box;
 }

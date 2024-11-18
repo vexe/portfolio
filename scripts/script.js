@@ -73,3 +73,27 @@ document.addEventListener("DOMContentLoaded", function () {
         link.setAttribute("rel", "noopener noreferrer");
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const projectItems = document.querySelectorAll(".project-item");
+
+    projectItems.forEach(item => {
+        const imageElement = item.querySelector(".project-item-image");
+        const projectName = item.querySelector(".project-item-name").textContent.trim().toLowerCase().replace(/\s+/g, '');
+
+        const staticImage = `images/${projectName}.png`;
+        const animatedImage = `images/${projectName}.gif`;
+
+        // Set the initial background image
+        imageElement.style.backgroundImage = `url('${staticImage}')`;
+
+        // Add hover event listeners
+        item.addEventListener("mouseover", () => {
+            imageElement.style.backgroundImage = `url('${animatedImage}')`;
+        });
+
+        item.addEventListener("mouseout", () => {
+            imageElement.style.backgroundImage = `url('${staticImage}')`;
+        });
+    });
+});
