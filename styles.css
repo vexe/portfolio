@@ -8,7 +8,6 @@ html {
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* Stack the children vertically */
 }
 
 main {
@@ -16,15 +15,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Center the content horizontally */
     justify-content: flex-start;
-    /* Align content at the top */
     height: auto;
     padding: 20px 0px;
-    /* Add padding for spacing */
     box-sizing: border-box;
-    /* Ensure padding doesn't affect width */
 }
+
 body
 {
     font-family: 'Courier New', monospace;
@@ -112,16 +108,29 @@ a:hover {
 
 .projects-grid {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 100%;
     gap: 10px;
 }
 
-.project-item {
-    flex: 1 1 calc(25% - 10px);
+.project-item
+{
+/* flex: 1 1 calc(25% - 10px); */
+    position: relative;
+    border: 2px solid rgb(128, 0, 0);
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 300px;
+    max-width: 1000px;
+    min-width: 1000px;
+}
+
+.project-item-thumbnail {
+    /* flex: 1 1 calc(25% - 10px); */
     position: relative;
     border: 2px solid rgb(128, 0, 0);
     box-sizing: border-box;
@@ -131,6 +140,7 @@ a:hover {
     min-width: 300px;
 }
 
+/* 
 @media (max-width: 1024px) {
     .project-item {
         flex: 1 1 calc(50% - 10px);
@@ -141,11 +151,11 @@ a:hover {
     .project-item {
         flex: 1 1 100%;
     }
-}
+} */
 
 .project-item:hover {
     border-color: red;
-    transform: scale(1.01);
+    /* transform: scale(1.01); */
 }
 
 .project-item:hover .project-item-image {
@@ -160,8 +170,8 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     opacity: 0.8;
     background-image: url("images/tinyrails.jpg");
     background-size: cover;
@@ -185,9 +195,15 @@ a:hover {
 
 .project-item-desc
 {
+    position: absolute;
+    left: 310px;
+    top: 50%;
+    bottom: 44%;
+    text-align: left;
+    padding-right: 4px; 
+    margin: auto;
+    height: 100%;
 }
-
-
 
 /*
 body {

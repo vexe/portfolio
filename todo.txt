@@ -1,0 +1,10 @@
+
+
+- link to github
+- link to youtube
+- link to twitter
+- link to instagram
+
+- programmer, chesss, training, woodworking, framing, electrical, tools
+- ps1 lowpoly, C, C#
+- projects: text editor, iou, jungle-rot
