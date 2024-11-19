@@ -75,25 +75,54 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const projectItem = entry.target;
+                const projectImage = projectItem.querySelector(".project-item-image");
+                const projectName = projectItem.dataset.projectName;
+
+                // Check if GIF is already prefetched
+                if (!projectImage.dataset.prefetched) {
+                    const animatedImage = `images/${projectName}.gif`;
+
+                    // Prefetch the GIF
+                    const img = new Image();
+                    img.src = animatedImage;
+
+                    // Save the prefetched GIF URL and mark it as prefetched
+                    projectImage.dataset.prefetchedGif = animatedImage;
+                    projectImage.dataset.prefetched = "true";
+
+                    // Unobserve after prefetching
+                    observer.unobserve(projectItem);
+                }
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Select all project items and observe them
     const projectItems = document.querySelectorAll(".project-item");
-
-    projectItems.forEach(item => {
-        const imageElement = item.querySelector(".project-item-image");
-        const projectName = item.querySelector(".project-item-name").textContent.trim().toLowerCase().replace(/\s+/g, '');
-
-        const staticImage = `images/${projectName}.png`;
-        const animatedImage = `images/${projectName}.gif`;
-
+    projectItems.forEach(projectItem => {
+        const projectImage = projectItem.querySelector(".project-item-image");
+        const projectName = projectItem.dataset.projectName;
+        
         // Set the initial background image
-        imageElement.style.backgroundImage = `url('${staticImage}')`;
-
-        // Add hover event listeners
-        item.addEventListener("mouseover", () => {
-            imageElement.style.backgroundImage = `url('${animatedImage}')`;
+        const staticImage = `images/${projectName}.png`;
+        projectImage.style.backgroundImage = `url('${staticImage}')`;
+        
+        // Hover in: Use the prefetched GIF if available
+        projectItem.addEventListener("mouseover", () => {
+            const prefetchedGif = projectImage.dataset.prefetchedGif || `images/${projectItem.dataset.projectName}.gif`;
+            projectImage.style.backgroundImage = `url('${prefetchedGif}')`;
         });
 
-        item.addEventListener("mouseout", () => {
-            imageElement.style.backgroundImage = `url('${staticImage}')`;
+        // Hover out: Switch back to the static image
+        projectItem.addEventListener("mouseout", () => {
+            projectImage.style.backgroundImage = `url('images/${projectName}.png')`;
         });
+
+        observer.observe(projectItem);
     });
 });
