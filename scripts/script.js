@@ -80,25 +80,18 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const projectItem = entry.target;
-                const projectImage = projectItem.querySelector(".project-item-image");
-                const projectName = projectItem.dataset.projectName;
+                const projectGif = projectItem.querySelector(".project-item-gif");
 
                 // Check if GIF is already prefetched
-                if (!projectImage.dataset.prefetched) {
+                if (projectGif && !projectGif.dataset.prefetched) {
+                    const projectName = projectItem.dataset.projectName;
                     const animatedImage = `images/${projectName}.gif`;
-
-                    // Prefetch the GIF
+                    
                     const img = new Image();
-                    img.onload = () => {
-                        // GIF exists, save the URL
-                        projectImage.dataset.prefetchedGif = animatedImage;
-                        projectImage.dataset.prefetched = "true";
-                    };
-                    img.onerror = () => {
-                        // GIF does not exist, fallback to PNG
-                        projectImage.dataset.prefetched = "true";
-                    };
                     img.src = animatedImage;
+                    
+                    projectGif.dataset.prefetchedGif = animatedImage;
+                    projectGif.dataset.prefetched = "true";
 
                     // Unobserve after prefetching
                     observer.unobserve(projectItem);
@@ -113,22 +106,27 @@ document.addEventListener("DOMContentLoaded", () => {
         const projectImage = projectItem.querySelector(".project-item-image");
         const projectName = projectItem.dataset.projectName;
         
-        // Set the initial background image
-        const staticImage = `images/${projectName}.png`;
-        projectImage.style.backgroundImage = `url('${staticImage}')`;
+        // Set the static image
+        projectImage.style.backgroundImage = `url('images/${projectName}.png')`;
         
         // Hover in: Use the prefetched GIF if available
-        projectItem.addEventListener("mouseover", () => {
-            const gif = projectImage.dataset.prefetchedGif;
-            if (gif) {
-                projectImage.style.backgroundImage = `url('${gif}')`;
-            }
-        });
+        const projectGif = projectItem.querySelector(".project-item-gif");
+        if (projectGif)
+        {
+            projectItem.addEventListener("mouseover", () => {
+                const prefetchedGif = projectGif.dataset.prefetchedGif || `images/${projectName}.gif`;
+                projectGif.style.backgroundImage = `url('${prefetchedGif}')`;
+                projectGif.style.opacity = "1";
+            });
 
-        // Hover out: Switch back to the static image
-        projectItem.addEventListener("mouseout", () => {
-            projectImage.style.backgroundImage = `url('images/${projectName}.png')`;
-        });
+            // Hover out: Switch back to the static image
+            projectItem.addEventListener("mouseout", () => {
+                projectGif.style.opacity = "0";
+                // setTimeout(() => {
+                //     projectGif.style.backgroundImage = "none";
+                // }, 500); 
+            });
+        }
 
         observer.observe(projectItem);
     });
