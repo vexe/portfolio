@@ -76,6 +76,7 @@ footer
 .about-text
 {
     line-height: 24px; 
+    max-width: 500px;
 }
 
 a {
