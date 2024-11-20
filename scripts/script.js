@@ -89,11 +89,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     // Prefetch the GIF
                     const img = new Image();
+                    img.onload = () => {
+                        // GIF exists, save the URL
+                        projectImage.dataset.prefetchedGif = animatedImage;
+                        projectImage.dataset.prefetched = "true";
+                    };
+                    img.onerror = () => {
+                        // GIF does not exist, fallback to PNG
+                        projectImage.dataset.prefetched = "true";
+                    };
                     img.src = animatedImage;
-
-                    // Save the prefetched GIF URL and mark it as prefetched
-                    projectImage.dataset.prefetchedGif = animatedImage;
-                    projectImage.dataset.prefetched = "true";
 
                     // Unobserve after prefetching
                     observer.unobserve(projectItem);
@@ -114,8 +119,10 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // Hover in: Use the prefetched GIF if available
         projectItem.addEventListener("mouseover", () => {
-            const prefetchedGif = projectImage.dataset.prefetchedGif || `images/${projectItem.dataset.projectName}.gif`;
-            projectImage.style.backgroundImage = `url('${prefetchedGif}')`;
+            const gif = projectImage.dataset.prefetchedGif;
+            if (gif) {
+                projectImage.style.backgroundImage = `url('${gif}')`;
+            }
         });
 
         // Hover out: Switch back to the static image
