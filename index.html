@@ -237,9 +237,9 @@
     </div>
     
     <div class="projects">
-        <div class="projects-label">Personal</div>
+        <div class="projects-label">Demos</div>
         <div class="projects-grid">
-    
+            
             <!-- Jungle Rot -->
             <div class="project-item" data-project-name="junglerot">
                 <div class="project-item-image">
@@ -253,6 +253,86 @@
                 </div>
             </div>
             
+            <!-- IOU -->
+            <div class="project-item" data-project-name="iou">
+                <div class="project-item-image">
+                    <div class="project-item-gif"></div>
+                    <div class="project-item-name">IOU</div>
+                </div>
+                <div class="project-item-desc">
+                    <b>IOU:</b> TODO<br><br>
+                    TODO
+                </div>
+            </div>
+            
+            <!-- swraster -->
+            <div class="project-item" data-project-name="swraster">
+                <div class="project-item-image">
+                    <div class="project-item-gif"></div>
+                    <div class="project-item-name">PS1 Software Renderer</div>
+                </div>
+                <div class="project-item-desc">
+                    <b>PS1 Software Renderer:</b> TODO<br><br>
+                    TODO
+                </div>
+            </div>
+            
+            <!-- metagen -->
+            <div class="project-item" data-project-name="metagen">
+                <div class="project-item-image">
+                    <div class="project-item-gif"></div>
+                    <div class="project-item-name">Meta Code Generation</div>
+                </div>
+                <div class="project-item-desc">
+                    <b>Meta Code Generation:</b> TODO<br><br>
+                    TODO
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="projects">
+        <div class="projects-label">Plugins</div>
+        <div class="projects-grid">
+    
+            <!-- VFW -->
+            <div class="project-item" data-project-name="vfw">
+                <div class="project-item-image">
+                    <div class="project-item-name">Vexe Framework</div>
+                </div>
+                <div class="project-item-desc">
+                    <b>VFW:</b> Custom serialization, sexy property drawers, faster GUI.<br><br>
+            
+                    VFW is an editor extension that offers much more advance editor extensibility features than what comes out of the box
+                    with Unity. A better drawing API, a faster GUI layout system for editor drawing, tons of attributes/drawers, helper
+                    types and more.<br><br>
+                    
+                    Was my biggest and most used plugin at the time. Basically was the precursor to Odin Inspector. Should I have asked money for it? Probably...<br><br>
+            
+                    Written in 2015, check out the source on <a class="external-link" href="https://github.com/vexe/VFW">github</a>.
+                </div>
+            </div>
+            
+            <!-- Fast Serializer -->
+            <div class="project-item" data-project-name="fastserializer">
+                <div class="project-item-image">
+                    <div class="project-item-name">Fast Serializer</div>
+                </div>
+                <div class="project-item-desc">
+                    <b>Fast Serializer:</b> IL-based binary serializer.<br><br>
+            
+                    emits IL to genreate the necessary serialization functions.<br><br>
+                    
+                    Supports inheritance, cyclic refernces, serialization by reference, single dimension and 2d arrays, generic Lists,
+                    Queues, Stacks, HashSet, Dictionary, Metadata (Type, FieldInfo, PropertyInfo, MethodInfo), enums, Guid, Nullables,
+                    structs/classes and some Unity types.<br><br>
+                    
+                    Learning IL and knowing what goes on under the hood gave me a much deeper knowldge of C#, thanks to this future me was able to write much more effecient C# code.<br><br>
+                    
+                    Written in 2015, check out the source on <a class="external-link" href="https://github.com/vexe/FastSerializer">github</a>.
+                </div>
+            </div>
+            
             <!-- Fast Reflection -->
             <div class="project-item" data-project-name="fastreflection">
                 <div class="project-item-image">
@@ -260,16 +340,34 @@
                 </div>
                 <div class="project-item-desc">
                     <b>Fast Reflection:</b> Delegates for Lightning Fast metadata Reflection.<br><br>
-                    
+            
                     This is an extension methods library that emits IL code to generate fast
                     field/property getters/setter, method calls and ctor invocations.<br><br>
-                    
+            
                     It's ~22x faster than normal reflection, within milliseconds of direct invocation.
                     Very simple, easy to use and intuitive API, with both weakly and strongly typed overloads.
-                    Handles instance and static members (fields, properties and methods) as well as ref/out method parameters.<br><br>
+                    Handles instance and static members (fields, properties and methods) as well as ref/out method
+                    parameters.<br><br>
+            
+                    Written in 2015, check out the source on <a class=external-link
+                        href="https://github.com/vexe/Fast.Reflection">Github</a>.<br>
+                    <a class=external-link
+                        href="https://assetstore.unity.com/packages/tools/fast-reflection-delegates-for-lightning-fast-metadata-reflection-31442">Unity
+                        Asset Store</a> page is still up it seems!
+                </div>
+            </div>
+            
+            <!-- gstring -->
+            <div class="project-item" data-project-name="gstring">
+                <div class="project-item-image">
+                    <div class="project-item-name">gstring</div>
+                </div>
+                <div class="project-item-desc">
+                    <b>gstring:</b> GC Free string for C#, sorry ladies.<br><br>
+            
+                    Uses black magic 'unsafe' C hacks to give you the ability to perform string operations without any allocations.<br><br>
                     
-                    Written in 2015, check out the source on <a class=external-link href="https://github.com/vexe/Fast.Reflection">Github</a>.<br>
-                    <a class=external-link href="https://assetstore.unity.com/packages/tools/fast-reflection-delegates-for-lightning-fast-metadata-reflection-31442">Unity Asset Store</a> page is still up it seems!
+                    Written in 2015, check out the source on <a class="external-link" href="https://github.com/vexe/gstring">github</a>.
                 </div>
             </div>
             
@@ -281,12 +379,48 @@
                 <div class="project-item-desc">
                     <b>uFAction:</b> Serializable & Inspectable Delegates (Actions & Funcs).<br><br>
             
-                    My first commercial plugin! This is basically UnityEvent before it was a thing. This also eventually led to the development of VFW and RabbitGUI.<br><br>
+                    My first commercial plugin! This is basically UnityEvent before it was a thing. This also eventually led to the
+                    development of VFW and RabbitGUI.<br><br>
             
-                    It supports both Unity objects and vanilla C# objects as targets. Assign handler arguments right from the editor.<br><br>
+                    It supports both Unity objects and vanilla C# objects as targets. Assign handler arguments right from the
+                    editor.<br><br>
             
-                    Published in 2014 on the <a class=external-link href="https://assetstore.unity.com/packages/tools/ufaction-17817">Unity
+                    Published in 2014 on the <a class=external-link
+                        href="https://assetstore.unity.com/packages/tools/ufaction-17817">Unity
                         Asset Store</a>.
+                </div>
+            </div>
+
+            <!-- Clipboard Logger -->
+            <div class="project-item" data-project-name="cliplog">
+                <div class="project-item-image">
+                    <div class="project-item-name">Clipboard Logger</div>
+                </div>
+                <div class="project-item-desc">
+                    <b>Clipboard Logger:</b> Intercepts Ctrl+C and logs the text content to a file.<br><br>
+            
+                    This is a very handy little utility, lot of times I forget I copied something I need and accidentally copy again and lose the oroginal content. With this, each Ctrl+C creates an entry in a file with timestamps so you never lose anything.<br><br>
+            
+                    Check out the source on <a class="external-link" href="https://github.com/vexe/clipboard-logger">github</a>.
+                </div>
+            </div>
+            
+            <!-- Happy Virus -->
+            <div class="project-item" data-project-name="happyvirus">
+                <div class="project-item-image">
+                    <div class="project-item-name">Happy Virus</div>
+                </div>
+                <div class="project-item-desc">
+                    <b>Happy Virus:</b> It's a happy virus. Prank your buddies kek.<br><br>
+            
+                    - Keeps popping annoying windows and boxes with stupid messages.<br>
+                    - Disables regedit.<br>
+                    - Disables taskmgr.<br>
+                    - Keeps sending BACKSPACE so user can't really type his way out.<br>
+                    - Copies itself to Startup folder.<br>
+                    - Consumes RAM and CPU.<br><br>
+            
+                    Check out the source on <a class="external-link" href="https://github.com/vexe/happy-virus">github</a>.
                 </div>
             </div>
         </div>
