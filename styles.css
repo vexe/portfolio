@@ -153,6 +153,7 @@ a:hover {
     /*background-image set from script!*/
     background-size: cover;
     background-position: center;
+    background-color:black;
 }
 
 .project-item-gif {
@@ -188,7 +189,7 @@ a:hover {
     top: 50%;
     bottom: 44%;
     text-align: left;
-    padding-right: 4px; 
+    padding-right: 8px; 
     margin: auto;
     height: 100%;
 }
