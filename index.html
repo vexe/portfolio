@@ -48,7 +48,7 @@
             <div class="about-text">
                 I'm Ali, and I like to build things.<br><br>
                 
-                I'm a generalist programmer at work with over a decade of game programming experience, from low-level systems and core APIs, to custom tooling, metaprogramming, serialization, gameplay, AI, technical art and UI. If it's needed by the job, it gets done.<br><br>
+                I'm a generalist game programmer at work with over a decade of experience, from low-level systems and core APIs, to custom tooling, metaprogramming, serialization, gameplay, AI, technical art and UI. If it's required by the job, it gets done.<br><br>
                 
                 Unity at day, Unreal at night making PS1-inspired games.
                 #GouraudShading4Life<br><br>
@@ -251,7 +251,10 @@
                     
                     Features prerendered backgrounds with static camera angles, tank controls, classic zombies, multiple weapons, limited inventory and puzzles!<br><br>
                     
-                    Notable progress compared to my other attempts, finishing is still hard but we're aiming for a free itch.io demo soon.
+                    Notable progress compared to my other attempts, finishing is still hard but we're aiming for a free itch.io demo soon.<br><br>
+                    
+                    Check out my tutorial on 
+                    <a class=external-link href="https://youtu.be/OdlQMwFJuwA">Prerendered backgrounds in Unreal</a>!
                 </div>
             </div>
             
@@ -277,13 +280,13 @@
                     turns out making an RE clone is not so trivial afterall.<br><br>
                     Recent mechanic clips from me: 
                     <a class=external-link href="https://youtu.be/U6UBnI-TkGc">Puzzles</a>,
-                    <a class=external-link href="https://youtu.be/49i-qQTKlIE">Map&File</a>,
-                    <a class=external-link href="https://youtu.be/IU8L0HpaG24">YouDead</a>,
-                    <a class=external-link href="https://youtu.be/4ECsCA-wNzo">MainMenu</a>.
+                    <a class=external-link href="https://youtu.be/49i-qQTKlIE">Map & File</a>,
+                    <a class=external-link href="https://youtu.be/IU8L0HpaG24">Game Over</a>,
+                    <a class=external-link href="https://youtu.be/4ECsCA-wNzo">Main Menu</a>.
                     <br>
                     OG project links from Nic:
-                    <a class=external-link href="https://www.youtube.com/watch?v=ojU89uMohI8">EnterTheLockerHorror</a>,
-                    <a class=external-link href="https://blenderartists.org/t/iou-fixed-camera-prerendered-deremake/549232">BlenderArtists</a>.
+                    <a class=external-link href="https://www.youtube.com/watch?v=ojU89uMohI8">Enter The Locker Horror</a>,
+                    <a class=external-link href="https://blenderartists.org/t/iou-fixed-camera-prerendered-deremake/549232">Blender Artists</a>.
                 </div>
             </div>
             
@@ -291,11 +294,20 @@
             <div class="project-item" data-project-name="swraster">
                 <div class="project-item-image">
                     <div class="project-item-gif"></div>
-                    <div class="project-item-name">PS1 Software Renderer</div>
+                    <div class="project-item-name">Bottleneck (PS1 Engine)</div>
                 </div>
-                <div class="project-item-desc">
-                    <b>PS1 Software Renderer:</b> TODO<br><br>
-                    TODO
+                <div class="project-item-desc" style="font-size: 13px; line-height: 13px;">
+                    Bottleneck is a game engine written in C/C++ from scratch. It features a software renderer with z-buffer and triangle sorting support, object culling, triangle clipping, perspective-correct and affine texture mapping.<br><br>
+                    The collision system used ellipse-based detection, where objects are represented as an ellipse and then shrunk down to a sphere to simplify math and do collision detection and handling. I used a simple grid for broadphase.<br><br>
+                    The animation system is skeletal-based bone-weighted key-framed implementation.<br><br>
+                    The asset pipeline used an offline step to convert models/images using Assimp to an internal engine format.<br><br>
+                    Platform layer (Win32) was written from scratch which gave the game input handling via Xinput, audio mixer using DirectSound, and would blit and stretch on screen the game's 640x480 or whatever size pixel buffer. Game state was separate from engine and compiled into a DLL which is loaded dynamically from the engine for hot-reloading support.<br><br>
+                    Prerendered backgrounds are implemented by populating the depth-buffer with the prerendered depth before rendering the scene:
+                    <a class=external-link href="https://youtu.be/7Mly16l23LU">Youtube Video.</a><br><br>
+                    Credits: 
+                    <a class=external-link href="https://youtu.be/WMSBRk5WG58">Casey Muratori</a>,
+                    <a class=external-link href="https://fgiesen.wordpress.com/2013/02/10/optimizing-the-basic-rasterizer/">Fabian Giesen</a>,
+                    <a class=external-link href="https://paulnettle.com/pub/FluidStudios/CollisionDetection/Fluid_Studios_Generic_Collision_Detection_for_Games_Using_Ellipsoids.pdf">Paul Nettle</a>
                 </div>
             </div>
             
