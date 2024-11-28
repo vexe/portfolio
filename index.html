@@ -274,7 +274,7 @@
                     work would be put on hold, then resumed, then on hold again.<br><br>
                     In 2020 I decided to give it a final go now that I have real experience making and shipping games. 
                     I implemented all the systems and mechanics of the game in Unreal and I was pumped, 
-                    but due to some unfortunate circumstances and major team communication problems, I had to cancel the project and move on. 
+                    but due to some unfortunate circumstances, I had to cancel the project and move on. 
                     Make use of the game systems in other projects. It was hard, we were both too attached and 
                     obsessed with this project, it wasn't healthy. We definitely bit more than what we could chew, 
                     turns out making an RE clone is not so trivial afterall.<br><br>
@@ -294,16 +294,16 @@
             <div class="project-item" data-project-name="swraster" style="height: 350px;">
                 <div class="project-item-image">
                     <div class="project-item-gif"></div>
-                    <div class="project-item-name">Bottleneck (PS1 Engine)</div>
+                    <div class="project-item-name">PS1 Game Engine</div>
                 </div>
                 <div class="project-item-desc" style="font-size: 14px; line-height: 14px;">
-                    This is a 3D game engine for lowpoly games. written in C/C++ from scratch. It features a software renderer with z-buffer and triangle sorting support, object culling, triangle clipping, perspective-correct and affine texture mapping.<br><br>
+                    This is a 3D game engine for lowpoly games. Written in C/C++ from scratch. It features a software renderer with z-buffer and triangle sorting support, object culling, triangle clipping, perspective-correct and affine texture mapping.<br><br>
                     The collision system used ellipse-based detection, where objects are represented as an ellipse and then shrunk down to a sphere to simplify math and do collision detection and handling. I used a simple grid for broadphase.<br><br>
                     The animation system is skeletal-based bone-weighted key-framed implementation.<br><br>
                     The asset pipeline used an offline step to convert models/images using Assimp to an internal engine format.<br><br>
                     Platform layer (Win32) was written from scratch which gave the game input handling via Xinput, audio mixer using DirectSound, and would blit and stretch on screen the game's 640x480 or whatever size pixel buffer. Game state was separate from engine and compiled into a DLL which is loaded dynamically from the engine for hot-reloading support.<br><br>
                     Prerendered backgrounds are implemented by populating the depth-buffer with the prerendered depth before rendering the scene:
-                    <a class=external-link href="https://youtu.be/7Mly16l23LU">Youtube Video.</a><br><br>
+                    <a class=external-link href="https://youtu.be/7Mly16l23LU">Youtube Video</a>.<br><br>
                     Credits: 
                     <a class=external-link href="https://youtu.be/WMSBRk5WG58">Casey Muratori</a>,
                     <a class=external-link href="https://fgiesen.wordpress.com/2013/02/10/optimizing-the-basic-rasterizer/">Fabian Giesen</a>,
@@ -316,11 +316,13 @@
             <div class="project-item" data-project-name="metagen">
                 <div class="project-item-image">
                     <div class="project-item-gif"></div>
-                    <div class="project-item-name">Meta Code Generation</div>
+                    <div class="project-item-name">Entity Inspector</div>
                 </div>
                 <div class="project-item-desc">
-                    <b>Meta Code Generation:</b> TODO<br><br>
-                    TODO
+                    OpenGL 3D engine with MD2 model animations, DLL hot-reloading, funky shaders, and an entity inspector that uses reflection/introspection to inspect data and modify values.<br><br>
+                    A preprocessor runs in a pre-build step, scans source code files and generates reflection code that the engine uses. The code contains metadata information about the types, field names, field types, and getters/setters and type constructors.<br><br>
+                    TODO: Post code on github. But first, figure out how this thing builds again Lol.<br><br>
+                    Written in 2015. Check out the <a class=external-link href="https://youtu.be/DR71jU6y_cE">demo on Youtube</a>.
                 </div>
             </div>
         </div>
