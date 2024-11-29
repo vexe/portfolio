@@ -13,13 +13,15 @@
 </head>
 <body>
     <header>
-    <!-- <nav class="navbar">
+    <nav class="navbar">
         <ul>
-            <li><a href="javascript:void(0);" onclick="toggleSection('about')">about</a></li>
-            <li><a href="javascript:void(0);" onclick="toggleSection('projects')">projects</a></li>
-            <li><a href="javascript:void(0);" onclick="toggleSection('contact')">contact</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#demos">demos</a></li>
+            <li><a href="#tools">tools</a></li>
+            <li><a href="#contact">contact</a></li>
         </ul>
-    </nav> -->
+    </nav>
     </header>
     
     <main>
@@ -30,7 +32,7 @@
     </div> -->
     
     <!-- Sections for navigation -->
-    <div class="about">
+    <div class="about" id="about">
         <div class="about-label">About Me</div>
         <div style="
             display: flex; 
@@ -43,28 +45,30 @@
             ">
             <div style="display: flex; flex-direction: column;">
             <img class="about-image" src="images/about.jpg">
-            <p style="text-align: center; transform: rotate(2deg); margin-top: -0px; font-size: 12px; color:rgb(194, 194, 194);">laser tag, circa 2016</p>
+            <p class="about-image-text"> laser tag, circa 2016</p>
+            <img class="about-abee" src="images/abee-typing.gif">
+            <p class="about-image-text"> Abee working that Ergodox EZ better than<br>anyone else in the office</p>
             </div>
             <div class="about-text">
                 I'm Ali, and I like to build things.<br><br>
                 
                 I'm a generalist game programmer at work with over a decade of experience, from low-level systems and core APIs, to custom tooling, metaprogramming, serialization, gameplay, AI, technical art and UI. If it's required by the job, it gets done.<br><br>
                 
-                Unity at day, Unreal at night making PS1-inspired games.
+                Unity at day, Unreal at night. I'm very passionate about recreating my childhood PS1 game experiences.
                 #GouraudShading4Life<br><br>
                 
                 Lately <a class="external-link" href="https://x.com/theemberknights">@TheEmberKnights</a>,
                 <a class="external-link" href="https://twitter.com/PlayStarkadia">@PlayStarkadia</a><br>
                 Favorite game: <a class="external-link" href="https://youtu.be/ss95YSHINw4?t=21">Resident Evil 1</a>.<br>
                 Favorite graphics: <a class="external-link" href="https://youtu.be/LYpGRqbv2WU?t=3">Dog Football</a>.<br><br>
-                I also dabble in other things like gynmastic strength training, construction, concrete work, electrical, woodworking, anything that lets me use my hands and gets me off the screen for a bit.<br><br>
+                I also dabble in gynmastic strength training, construction work, electrical, woodworking, anything that lets me use my hands and gets me off the screen for a bit.<br><br>
                 
                 Challenge me on <a class="external-link" href="https://lichess.org/@/PhastPhister">lichess</a>!
             </div>
         </div>
     </div>
     
-    <div class="projects">
+    <div class="projects" id="projects">
         <div class="projects-label">Doom Turtle</div>
         <div class="projects-grid">
 
@@ -236,7 +240,7 @@
         </div>
     </div>
     
-    <div class="projects">
+    <div class="projects" id="demos">
         <div class="projects-label">Demos</div>
         <div class="projects-grid">
             
@@ -328,7 +332,7 @@
         </div>
     </div>
     
-    <div class="projects">
+    <div class="projects" id="tools">
         <div class="projects-label">Tools</div>
         <div class="projects-grid">
     
@@ -501,9 +505,14 @@
         </div>
     </div>
     
-    <div class="contact">
+    <div class="contact" id="contact">
         <div class="contact-label">Contact</div>
-        <div class="contact-email"><a href="mailto: askvexe@gmail.com">askvexe@gmail.com</a></div>
+        <ul class="contact-list">
+        <li><a href="mailto: askvexe@gmail.com">askvexe@gmail.com</a></li>
+        <li><a class=external-link href="https://www.youtube.com/@vexedev">youtube</a></li>
+        <li><a class=external-link href="https://twitter.com/vexe666">twitter</a></li>
+        <li><a class=external-link href="https://www.instagram.com/shooploops">instagram</a></li>
+        </ul>
     </div>
     
     </main>

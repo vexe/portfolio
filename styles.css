@@ -10,6 +10,11 @@ html {
     flex-direction: column;
 }
 
+html
+{
+    scroll-behavior: smooth;
+}
+
 main {
     width: 100%;
     display: flex;
@@ -55,6 +60,7 @@ footer
 
 .about
 {
+    margin-top: 32px;
 }
 
 .contact
@@ -67,10 +73,33 @@ footer
     height: 250px;
     object-fit: cover;
     display: inline;
-    /* display: block;
-    margin: auto; */
     transform: rotate(2deg);
     white-space: nowrap;
+}
+
+.about-abee
+{
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    display: inline;
+    transform: rotate(2deg);
+    white-space: nowrap;
+}
+
+.about-image-text
+{
+    text-align: center; 
+    transform: rotate(2deg); 
+    margin-top: -0px; 
+    font-size: 12px; 
+    margin-left: -40px;
+    color:rgb(194, 194, 194);
+}
+
+.about-image:hover
+{
+    background-image: url("images/ali-reigns.gif");
 }
 
 .about-text
@@ -98,13 +127,6 @@ a:hover {
     font-weight: 400;
     background-color: rgba(0,0,0,0.5);
     margin-bottom: 8px;
-}
-
-.contact-email
-{
-    text-align: center;
-    text-decoration: underline;
-    color: #72b6ff;
 }
 
 .projects-grid {
@@ -194,6 +216,41 @@ a:hover {
     height: 100%;
 }
 
+.navbar {
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    background: linear-gradient(to right, #001201, #000000 50%, #001201);
+    box-shadow: 0 4px 6px rgb(0, 31, 2);
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.contact-list
+{
+    display: flex; 
+    justify-items: center; 
+    flex-direction: column; 
+    align-items: center;
+}
+
 /*
 body {
     font-family: 'Courier New', monospace;
@@ -232,48 +289,4 @@ body {
     }
 }
 
-.navbar {
-    background-color: #000000;
-    list-style-type: none;
-    padding: 10px;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.navbar li {
-    margin-right: 20px;
-    cursor: pointer;
-}
-
-.navbar a {
-    display: inline-block;
-    color: #1e56ff;
-    text-decoration: none;
-    font-size: 24px;
-    font-style: oblique;
-    transition: background-color 0.1s, transform 0.1s;
-}
-
-.navbar a:hover {
-    color: #ff6347;
-    transform: scale(1.05);
-}
-
-.navbar a:active {
-    transform: scale(0.975);
-}
 */
