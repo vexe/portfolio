@@ -1,15 +1,4 @@
 
-// VISIT COUNTER
-// let visitCount = localStorage.getItem('visitCount');
-// if (!visitCount) {
-//   visitCount = 1;
-// } else {
-//   visitCount = parseInt(visitCount) + 1;
-// }
-// localStorage.setItem('visitCount', visitCount);
-// document.getElementById('visit-counter').textContent = 'Visits: ' + visitCount;
-
-
 // EXTERNAL LINKS
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM fully loaded and parsed");
@@ -21,6 +10,18 @@ document.addEventListener("DOMContentLoaded", function () {
         link.setAttribute("target", "_blank");
         link.setAttribute("rel", "noopener noreferrer");
     });
+    
+    // VISIT COUNTER
+    let visitCount = localStorage.getItem('visitCount');
+    if (!visitCount) {
+    visitCount = 1;
+    } else {
+    visitCount = parseInt(visitCount) + 1;
+    }
+    localStorage.setItem('visitCount', visitCount);
+    var visitCounterElement = document.getElementById('visit-counter');
+    if (visitCounterElement) visitCounterElement.textContent = 'YOU ARE VISITOR #' + visitCount;
+    else console.log("Cannot find visit-counter");
 });
 
 document.addEventListener("DOMContentLoaded", () => {

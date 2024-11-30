@@ -38,16 +38,12 @@ body
 
 footer
 {
-    background-color: #0000005a;
+    /* background-color: #0000005a;
     color: green;
     
     text-align: center;
     padding: 1px 0;
-    height: auto;
-}
-
-#visit-counter {
-    font-size: 1rem;
+    height: auto; */
 }
 
 .projects,
@@ -61,6 +57,17 @@ footer
 .about
 {
     margin-top: 32px;
+}
+
+.about-grid
+{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-right: 100px;
 }
 
 .contact
@@ -96,6 +103,27 @@ footer
     white-space: nowrap;
 }
 
+.about-image-gangsta {
+    width: 400px;
+    height: 450px;
+    object-fit: contain;
+    display: inline;
+    white-space: nowrap;
+    margin-left: -140px;
+    transform: rotate(3deg);
+}
+
+.about-image-games {
+    width: 400px;
+    height: 600px;
+    object-fit: contain;
+    display: inline;
+    white-space: nowrap;
+    transform: rotate(3deg);
+    margin-top: 40px;
+    margin-left: -40px;
+}
+
 .about-image-text
 {
     text-align: center; 
@@ -113,7 +141,7 @@ footer
 
 .about-text
 {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 25px; 
     max-width: 500px;
 }
@@ -281,6 +309,21 @@ a:hover {
 #top-button:hover {
     background-color: #4b4b4b;
     color: white;
+}
+
+#visit-counter
+{
+    text-align: center;
+    margin-bottom: 24px;
+    color: rgb(0, 187, 0);
+    font-size: 32px;
+    font-family: terminal;
+    text-shadow: 4px 4px black;
+}
+
+@font-face {
+    font-family: 'terminal';
+    src: URL('fonts/clacon2.ttf') format('truetype');
 }
 
 /*
