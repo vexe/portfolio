@@ -235,6 +235,12 @@ a:hover {
     color: rgb(194, 194, 194);
 }
 
+.header-desc:hover
+{
+    border-color: rgb(128, 128, 128);
+    color: rgb(222,222,222);
+}
+
 .header-desc-image
 {
     position: absolute;
