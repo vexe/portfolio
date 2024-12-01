@@ -27,6 +27,12 @@
     </nav>
     </header>
     
+    <iframe
+        src="https://sumitkcs.github.io/matrix-effect/"
+        frameborder="0" style="position:fixed; width: 100%; height: 100%; border: none; z-index: -100;">
+    </iframe>
+    <div class="overlay"></div>
+
     <main>
     <!-- <div class="marquee-container">
         <div class="marquee">
@@ -36,7 +42,7 @@
     
     <!-- Sections for navigation -->
     <div class="about" id="about">
-        <div class="about-label">About Me</div>
+        <div class="about-header"><img src="images/about-me.png"></div>
         <div class="about-grid">
             <div style="display: flex; flex-direction: column;">
                 <img class="about-image-cross" src="images/about-cross.png">
@@ -83,7 +89,7 @@
     </div>
     
     <div class="projects" id="projects">
-        <div class="projects-label">Doom Turtle</div>
+        <div class="doomturtle-header"><img src="images/doom-turtle.png"></div>
         <div class="projects-grid">
 
             <!-- Starkadia -->
@@ -118,7 +124,7 @@
     </div>
     
     <div class="projects">
-        <div class="projects-label">Tiny Titan Studios</div>
+        <div class=tts-header><img src="images/tts.png"></div>
         <div class="projects-grid">
     
             <!-- Tiny Rails -->
@@ -255,7 +261,7 @@
     </div>
     
     <div class="projects" id="demos">
-        <div class="projects-label">Demos</div>
+        <div class="demos-header"><img src="images/demos.png"></div>
         <div class="projects-grid">
             
             <!-- Jungle Rot -->
@@ -347,7 +353,7 @@
     </div>
     
     <div class="projects" id="tools">
-        <div class="projects-label">Tools</div>
+        <div class="tools-header"><img src="images/tools.png"></div>
         <div class="projects-grid">
     
             <!-- FRED -->
@@ -520,7 +526,7 @@
     </div>
     
     <div class="contact" id="contact">
-        <div class="contact-label">Contact</div>
+        <div class="contact-label">Contact☎️</div>
         <ul class="contact-list">
         <li><a href="mailto: askvexe@gmail.com">askvexe@gmail.com</a></li>
         <li><a class=external-link href="https://www.youtube.com/@vexedev">youtube</a></li>
@@ -529,11 +535,21 @@
         </ul>
     </div>
     
+    <div class="contact" id="links">
+        <div class="contact-label">Links🌎</div>
+        <ul class="contact-list">
+            <li><a class=external-link href="https://hero.handmade.network/">Handmade Hero</a></li>
+            <li><a class=external-link href="https://hitmen.c02.at/html/psx_releases.html">Hitmen</a></li>
+            <li><a class=external-link href="https://github.com/Igglybuff/awesome-piracy">Warez</a></li>
+            <li><a class=external-link href="https://www.textstudio.com/">Textstudio Font Generator</a></li>
+        </ul>
+    </div>
+    
     </main>
     
     <footer>
-        <div id="visit-counter">
-        </div>
+        <div id="visit-counter"></div>
+        <div style="display: flex; justify-content: center;"><img src="images/construction.gif"></div>
     </footer>
 </body>
 </html>

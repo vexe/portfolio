@@ -6,21 +6,14 @@ html {
     padding: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-html
-{
-    scroll-behavior: smooth;
 }
 
 main {
     width: 100%;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-start; */
     height: auto;
     padding: 20px 0px;
     box-sizing: border-box;
@@ -31,9 +24,22 @@ body
     font-family: 'Courier New', monospace;
     /* background-repeat: no-repeat;
     background-attachment: fixed; */
-    background-color: rgb(14, 30, 15);
-    /* background-blend-mode: overlay; */
+    background-color: rgb(17, 17, 17);
+    background-blend-mode: overlay;
+    /* background-image: url('images/matrix.gif'); */
     color: rgb(250, 255, 180);
+}
+
+.overlay
+{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    background-blend-mode: overlay;
+    z-index: -1;
 }
 
 footer
@@ -51,12 +57,12 @@ footer
 .contact
 {
     width: 100%;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
+    scroll-margin-top: 70px;
 }
 
 .about
 {
-    margin-top: 32px;
 }
 
 .about-grid
@@ -121,7 +127,7 @@ footer
     white-space: nowrap;
     transform: rotate(3deg);
     margin-top: 40px;
-    margin-left: -40px;
+    margin-left: -30px;
 }
 
 .about-image-text
@@ -134,16 +140,14 @@ footer
     color:rgb(194, 194, 194);
 }
 
-.about-image:hover
-{
-    background-image: url("images/ali-reigns.gif");
-}
-
 .about-text
 {
     font-size: 18px;
     line-height: 25px; 
     max-width: 500px;
+    background-color: rgba(0, 15, 0, 0.8);
+    padding: 10px;
+    border: 1px solid rgb(128, 0, 0);
 }
 
 a {
@@ -157,7 +161,6 @@ a:hover {
 }
 
 .projects-label,
-.about-label,
 .contact-label
 {
     text-align: center;
@@ -166,6 +169,32 @@ a:hover {
     background-color: rgba(0,0,0,0.5);
     margin-bottom: 8px;
 }
+
+.about-header,
+.demos-header,
+.doomturtle-header,
+.tts-header,
+.tools-header
+{
+    background-size: auto;
+    background-blend-mode: overlay;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.about-header { height: 140px; }
+.doomturtle-header { height: 240px; }
+.tts-header { height: 180px; }
+.demos-header { height: 180px; }
+.tools-header { height: 120px; }
+
+.about-header img {height: 150px; margin-top:100px; }
+.doomturtle-header img {height:240px;}
+.tts-header img{height: 250px;}
+.demos-header img{height:180px;}
+.tools-header img{height:120px;}
 
 .projects-grid {
     display: flex;
@@ -188,6 +217,7 @@ a:hover {
     height: 300px;
     max-width: 1000px;
     min-width: 1000px;
+    background-color: rgba(0,15,0,0.8);
 }
 
 .project-item:hover {
@@ -314,16 +344,21 @@ a:hover {
 #visit-counter
 {
     text-align: center;
-    margin-bottom: 24px;
-    color: rgb(0, 187, 0);
+    margin-bottom: 12px;
+    color: red;
     font-size: 32px;
-    font-family: terminal;
+    font-family: clock;
     text-shadow: 4px 4px black;
 }
 
 @font-face {
     font-family: 'terminal';
     src: URL('fonts/clacon2.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'clock';
+    src: URL('fonts/clock.ttf') format('truetype');
 }
 
 /*
