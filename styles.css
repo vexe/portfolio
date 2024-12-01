@@ -147,7 +147,12 @@ footer
     max-width: 500px;
     background-color: rgba(0, 15, 0, 0.8);
     padding: 10px;
-    border: 1px solid rgb(128, 0, 0);
+    border: 1px solid rgb(3, 52, 0);
+}
+
+.about-text:hover
+{
+    border-color: red;
 }
 
 a {
@@ -196,6 +201,49 @@ a:hover {
 .demos-header img{height:180px;}
 .tools-header img{height:120px;}
 
+.tts-desc
+{
+    font-size: 12px;
+    display: inline;
+    text-align: center;
+    color: rgb(194, 194, 194);
+    margin-top: -40px;
+    max-width: 400px;
+}
+
+.header-desc
+{
+    position: relative;
+    
+    border: 2px dotted rgb(35, 35, 35);
+    border-radius: 20px;
+    
+    box-sizing: border-box;
+    height: 100px;
+    max-width: 750px;
+    min-width: 750px;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+    
+    padding-left: 4px;
+    padding-right: 4px;
+    
+    font-size: 14px;
+    color: rgb(194, 194, 194);
+}
+
+.header-desc-image
+{
+    position: absolute;
+    top: -18px;
+    left: -21px;
+    width: 40px;
+    height: 40px;
+}
+
 .projects-grid {
     display: flex;
     flex-direction: column;
@@ -209,9 +257,8 @@ a:hover {
 
 .project-item
 {
-/* flex: 1 1 calc(25% - 10px); */
     position: relative;
-    border: 2px solid rgb(128, 0, 0);
+    border: 2px solid rgb(3, 52, 0);
     box-sizing: border-box;
     overflow: hidden;
     height: 300px;
