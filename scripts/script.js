@@ -1,4 +1,8 @@
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
 // EXTERNAL LINKS
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM fully loaded and parsed");
@@ -13,10 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // VISIT COUNTER
     let visitCount = localStorage.getItem('visitCount');
-    if (!visitCount) {
-    visitCount = 1;
-    } else {
-    visitCount = parseInt(visitCount) + 1;
+    if (!visitCount)
+    {
+        visitCount = getRandomInt(1000);
+    }
+    else
+    {
+        visitCount = parseInt(visitCount) + 1;
     }
     localStorage.setItem('visitCount', visitCount);
     var visitCounterElement = document.getElementById('visit-counter');
