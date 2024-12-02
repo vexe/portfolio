@@ -44,12 +44,7 @@ body
 
 footer
 {
-    /* background-color: #0000005a;
-    color: green;
     
-    text-align: center;
-    padding: 1px 0;
-    height: auto; */
 }
 
 .projects,
@@ -59,6 +54,13 @@ footer
     width: 100%;
     margin-bottom: 40px;
     scroll-margin-top: 70px;
+}
+
+#demos,
+#tools,
+#projects-tts
+{
+    margin-top: 100px;
 }
 
 .about
@@ -197,7 +199,7 @@ a:hover {
 
 .about-header img {height: 150px; margin-top:100px; }
 .doomturtle-header img {height:240px;}
-.tts-header img{height: 250px;}
+.tts-header img{height: 180px;}
 .demos-header img{height:180px;}
 .tools-header img{height:120px;}
 
@@ -219,19 +221,21 @@ a:hover {
     border-radius: 20px;
     
     box-sizing: border-box;
-    height: 100px;
-    max-width: 750px;
-    min-width: 750px;
+    min-height: 75px;
+    max-height: 150px;
+    max-width: 800px;
+    min-width: 700px;
     background-color: rgba(0, 0, 0, 0.8);
 
     display: flex;
     text-align: center;
     align-items: center;
     
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 16px;
+    padding-left: 16px;
     
-    font-size: 14px;
     color: rgb(194, 194, 194);
 }
 
@@ -271,10 +275,12 @@ a:hover {
     max-width: 1000px;
     min-width: 1000px;
     background-color: rgba(0,15,0,0.8);
+    color: rgb(225, 230, 155);
 }
 
 .project-item:hover {
     border-color: red;
+    color: rgb(250, 255, 180);
     /* transform: scale(1.01); */
 }
 
