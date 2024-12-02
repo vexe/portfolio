@@ -188,19 +188,19 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .about-header { height: 180px; margin-top: 40px; margin-bottom: -40px; }
 .doomturtle-header { height: 240px; }
 .tts-header { height: 180px; }
-.demos-header { height: 180px; }
-.tools-header { height: 120px; margin-bottom: 10px; }
+.demos-header { height: 200px; }
+.tools-header { height: 120px; margin-bottom: 0px; }
 
-.about-header img {height: 120px; }
+.about-header img {height: 110px; }
 .doomturtle-header img {height:240px;}
 .tts-header img{height: 180px;}
-.demos-header img{height:180px;}
+.demos-header img{height:200px;}
 .tools-header img{height:120px;}
 
 .tts-desc
