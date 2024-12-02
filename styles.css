@@ -42,6 +42,17 @@ body
     z-index: -1;
 }
 
+.construction {
+    display: none;
+}
+
+.construction img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    background-size: contain;
+}
+
 footer
 {
     

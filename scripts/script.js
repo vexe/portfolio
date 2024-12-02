@@ -29,6 +29,21 @@ document.addEventListener("DOMContentLoaded", function () {
     var visitCounterElement = document.getElementById('visit-counter');
     if (visitCounterElement) visitCounterElement.textContent = 'YOU ARE VISITOR #' + visitCount;
     else console.log("Cannot find visit-counter");
+    
+    // MOBILE
+    function isMobile()
+    {
+        return /Mobi|Android/i.test(navigator.userAgent);
+    }
+
+    // Display the under construction message if on mobile
+    if (isMobile())
+    {
+        const constructionDiv = document.getElementById('construction');
+        constructionDiv.style.display = 'block'; // Show the message
+        document.body.innerHTML = ''; // Clear other content
+        document.body.appendChild(constructionDiv); // Add the under construction div
+    }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
