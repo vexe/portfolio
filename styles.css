@@ -74,7 +74,7 @@ footer
     gap: 20px;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     margin-right: 100px;
 }
 
@@ -191,13 +191,13 @@ a:hover {
     margin-bottom: 20px;
 }
 
-.about-header { height: 140px; }
+.about-header { height: 180px; margin-top: 40px; margin-bottom: -40px; }
 .doomturtle-header { height: 240px; }
 .tts-header { height: 180px; }
 .demos-header { height: 180px; }
-.tools-header { height: 120px; }
+.tools-header { height: 120px; margin-bottom: 10px; }
 
-.about-header img {height: 150px; margin-top:100px; }
+.about-header img {height: 120px; }
 .doomturtle-header img {height:240px;}
 .tts-header img{height: 180px;}
 .demos-header img{height:180px;}
@@ -420,20 +420,12 @@ a:hover {
     src: URL('fonts/clock.ttf') format('truetype');
 }
 
-/*
-body {
-    font-family: 'Courier New', monospace;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: rgba(6, 31, 11, 0.75);
-    background-blend-mode: overlay;
-    color: rgb(250, 255, 180);
-}
-
 .marquee-container {
     width: 100%;
     overflow: hidden;
     position: relative;
+    
+    background: linear-gradient(to left, #001201, #000000);
 }
 
 .marquee {
@@ -446,6 +438,7 @@ body {
     padding: 0 0px;
     font-size: 48px;
     white-space: nowrap;
+    font-family: terminal;
 }
 
 @keyframes marquee {
@@ -457,5 +450,3 @@ body {
         transform: translateX(-100%);
     }
 }
-
-*/
