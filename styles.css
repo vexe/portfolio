@@ -157,7 +157,9 @@ footer
 {
     font-size: 18px;
     line-height: 25px; 
+    min-width: 450px;
     max-width: 500px;
+    max-height: 600px;
     background-color: rgba(0, 15, 0, 0.8);
     padding: 10px;
     border: 1px solid rgb(3, 52, 0);
